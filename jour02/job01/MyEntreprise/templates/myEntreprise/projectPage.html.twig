@@ -1,0 +1,14 @@
+{% set title = project.title %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="section">
+    <div class="container">
+		<div class="content">
+			<img src="{{ project.image }}">
+			{{ project.content|raw }}
+		</div>
+    </div>
+</main>
+{% endblock %}
