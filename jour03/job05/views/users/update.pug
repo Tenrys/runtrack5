@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+	.columns.is-centered
+		.column.is-narrow
+			form(method="POST", @submit.prevent=`userUpdate(${user.id}, $event)`)
+				.columns
+					.column
+						.field
+							label.label Prénom
+							.control
+								input.input(type="text", name="firstname", required, minlength="2", maxlength="255", value=user.firstname)
+					.column
+						.field
+							label.label Nom
+							.control
+								input.input(type="text", name="lastname", required, minlength="2", maxlength="255", value=user.lastname)
+				.columns
+					.column
+						.field
+							label.label E-mail
+							.control
+								input.input(type="email", name="email", required, minlength="2", maxlength="255", value=user.email)
+				.buttons.is-pulled-right
+					input.button.is-success(type="submit", value="Envoyer")

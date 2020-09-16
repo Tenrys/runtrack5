@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+	.columns.is-centered
+		.column.is-narrow
+			table.table
+				thead
+					tr
+						th ID
+						th Prénom
+						th Nom
+						th E-mail
+						th
+				tbody
+					for user in users
+						tr
+							td= user.id
+							td= user.firstname
+							td= user.lastname
+							td= user.email
+							td
+								form.buttons
+									a.tag.tag-button.is-info(href=`/users/update/${user.id}`) Modifier
+									button.tag.tag-button.is-danger(type="button", @click=`userDelete(${user.id})`) Supprimer

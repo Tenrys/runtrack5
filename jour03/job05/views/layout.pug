@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+	body
+		#app
+			include navbar
+			main.section
+				h1.title.has-text-centered= title
+				.container
+					block content
+		script(src='/javascripts/index.js')

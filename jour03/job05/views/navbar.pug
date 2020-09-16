@@ -1,0 +1,13 @@
+nav.navbar.is-info.is-spaced(role="navigation", aria-label="main navigation")
+	.navbar-brand
+		.navbar-item
+			h1.title
+				a.has-text-light(href="/") Express.js Utilisateurs CRUD
+		a.navbar-burger.burger(role="button", aria-label="menu", aria-expanded="false", @click="navbarActive = !navbarActive")
+			span(aria-hidden="true")
+			span(aria-hidden="true")
+			span(aria-hidden="true")
+	.navbar-menu(:class="{ 'is-active': navbarActive }")
+		.navbar-start
+			a.navbar-item(href="/") Accueil
+			a.navbar-item(href="/users/add") Ajouter un utilisateur
