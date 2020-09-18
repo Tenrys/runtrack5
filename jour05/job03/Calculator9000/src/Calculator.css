@@ -1,0 +1,11 @@
+.calculator .tile {
+	display: flex !important;
+}
+.calculator .screen {
+	width: 100%;
+}
+@media screen and (min-width: 769px), print {
+	.calculator .screen {
+		width: 203px;
+	}
+}
